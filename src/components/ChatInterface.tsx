@@ -10,6 +10,22 @@ interface ChatInterfaceProps {
   themeId: string;
 }
 
+const bgColors: Record<string,string> ={ 
+  red: 'bg-red-50',
+  blue: 'bg-blue-50',
+  green: 'bg-green-50',
+  orange: 'bg-orange-50',
+  yellow: 'bg-yellow-50'
+}
+
+const headerColors: Record<string,string> ={ 
+  red: 'bg-red-200',
+  blue: 'bg-blue-200',
+  green: 'bg-green-200',
+  orange: 'bg-orange-200',
+  yellow: 'bg-yellow-200'
+}
+
 export default function ChatInterface({ themeId }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -152,9 +168,9 @@ export default function ChatInterface({ themeId }: ChatInterfaceProps) {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className={`flex flex-col h-screen ${bgColors[theme.color]}`}>
       {/* Header */}
-      <div className={`p-4 ${theme.color} text-white shadow-md`}>
+      <div className={`p-4 ${headerColors[theme.color]} text-gray-600 shadow-md`}>
         <div className="flex items-center space-x-3">
           <div>
             <h1 className="text-xl font-semibold">{theme.name}</h1>

@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+
+@layer base {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 
+
 /* Custom scrollbar */
-.overflow-y-auto::-webkit-scrollbar {
+/* .overflow-y-auto::-webkit-scrollbar {
   width: 6px;
 }
 
@@ -24,12 +28,8 @@ html, body {
 
 .overflow-y-auto::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
-}
+} */
 
-.theme-description {
-  text-decoration:none;
-  
-}
 
 /* Smooth transitions */
 * {

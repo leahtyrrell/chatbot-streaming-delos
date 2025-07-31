@@ -18,3 +18,4 @@ export interface StreamResponse {
   content: string;
   finished: boolean;
 }
+

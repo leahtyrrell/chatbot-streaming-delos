@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+
 interface MessageInputProps {
   onSendMessage: (message: string) => void;
   disabled?: boolean;
@@ -16,6 +17,7 @@ export default function MessageInput({
   isGenerating = false 
 }: MessageInputProps) {
   const [message, setMessage] = useState('');
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,15 +35,15 @@ export default function MessageInput({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
-      <div className="flex items-end space-x-2">
+    <form onSubmit={handleSubmit} className="p-6 border bg-gray-100">
+      <div className="flex items-end">
         <div className="flex-1">
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Type your message..."
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+            className="w-full px-3 py-2 border border-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
             rows={1}
             disabled={disabled}
             style={{ minHeight: '40px', maxHeight: '120px' }}

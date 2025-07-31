@@ -17,14 +17,13 @@ export default function ChatPage({ params }: ChatPageProps) {
   }
 
   return (
-    <div className="h-screen flex flex-col">
-      {/* Back button */}
+    <div >
       <div className="p-2 bg-white border-b">
         <Link
           href="/"
-          className="no-underline inline-flex items-center px-3 py-1 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+          className="inline-flex items-center px-3 py-1 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
         >
-          Back to themes
+          <p>&lt; Back to Themes</p>
         </Link>
       </div>
       
